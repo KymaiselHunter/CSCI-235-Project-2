@@ -27,10 +27,20 @@ void printMageAttributes(Mage *pMage)
     cout << "Mage Incarnate:" << pMage->hasIncarateSummon() << endl;
 }
 
+void testMageSetters(Mage *pMage, string pSchool = "NONE", string pWeapon = "NONE", bool pIncarnate = false)
+{
+    pMage->setSchool(pSchool);
+    pMage->setCastingWeapon(pWeapon);
+    pMage->setIncarnateSummon(pIncarnate);
+
+    printMageAttributes(pMage);
+}
+
 int main()
 {
     Mage m;
     //printCharacterAttributes(&m);
     printMageAttributes(&m);
     
+    testMageSetters(&m, "elemental", "WAnd", true);
 }

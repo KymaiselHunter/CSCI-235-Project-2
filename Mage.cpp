@@ -1,8 +1,5 @@
 #include "Mage.hpp"
 
-//for to upper
-//#include <cctype>
-
 //Constructors
 Mage::Mage()
 {
@@ -28,7 +25,7 @@ bool Mage::setSchool(const std::string &pSchool)
 
     for(int i = 0; i < inputLength; i++)
     {
-        capitalInput = toupper(pSchool[i]);
+        capitalInput += toupper(pSchool[i]);
     }
 
     //Checks if the input matches, changes and returns true if it does
@@ -56,7 +53,7 @@ bool Mage::setCastingWeapon(const std::string &pWeapon)
 
     for(int i = 0; i < inputLength; i++)
     {
-        capitalInput = toupper(pWeapon[i]);
+        capitalInput += toupper(pWeapon[i]);
     }
     
     //Checks if the input matches, changes and returns true if it does
