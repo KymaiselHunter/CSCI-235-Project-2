@@ -3,9 +3,11 @@ using namespace std;
 
 #include "Character.hpp"
 #include "Mage.hpp"
+#include "Scoundrel.hpp"
 
 #include "Character.cpp"
 #include "Mage.cpp"
+#include "Scoundrel.cpp"
 
 void printCharacterAttributes(Character *pCharacter)
 {
@@ -36,6 +38,16 @@ void testMageSetters(Mage *pMage, string pSchool = "NONE", string pWeapon = "NON
     printMageAttributes(pMage);
 }
 
+void printScoundrelAttributes(Scoundrel *pScoundrel)
+{
+    printCharacterAttributes(pScoundrel);
+
+    cout << "\nUnique Scoundrel attributes: " << endl;
+    cout << "Scoundrel Dagger: " << pScoundrel->getDagger() << endl;
+    cout << "Scoundrel Faction: " << pScoundrel->getFaction() << endl;
+    cout << "Scoundrel Disguise: " << pScoundrel->hasDisguise() << endl;
+}
+
 int main()
 {
     Mage m;
@@ -47,4 +59,12 @@ int main()
     cout << "Test Paramertized Mage Constructor" << endl;
     Mage m2 = Mage("Kyle", "HUMAN", 1000, 2000, 3000, false, "elemental", "WAnd", true);
     printMageAttributes(&m2);
+
+    cout << "\nTest Scoundrel" << endl;
+    Scoundrel s;
+    printScoundrelAttributes(&s);
+
+    cout << "Test Paramertized SCoundrel Constructor" << endl;
+    Scoundrel s2 = Scoundrel("Kyle", "HUMAN", 1000, 2000, 3000, false, "iron", "shadowblade", true);
+    printScoundrelAttributes(&s2);
 }

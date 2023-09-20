@@ -28,7 +28,7 @@ class Scoundrel : public Character
         std::string getDagger() const;
 
         //Faction accessor and mutator
-        void setFaction(const std::string &pFaction);
+        bool setFaction(const std::string &pFaction);
         std::string getFaction() const;
 
         //disguise accesor and mutator
