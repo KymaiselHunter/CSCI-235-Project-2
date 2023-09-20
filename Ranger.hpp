@@ -22,8 +22,19 @@ class Ranger: public Character
 
     public:
         Ranger();
-        //Ranger();
+        Ranger(const std::string &pName, const std::string &pRace = "NONE", int pVitality = 0, 
+        int pArmor = 0, int pLevel = 0, bool pEnemy = false, 
+        std::vector<Arrows> pArrows, std::vector<std::string> pAffinities, bool pCompanian = false);
 
+        std::vector<Arrows> getArrows() const;
+        bool addArrows(const std::string &pType, const int pQuantity);
+        bool fireArrow(const std::string &ptype);
+
+        bool addAffinity(const std::string &pAffinity);
+        std::vector<std::string> getAffinities() const;
+
+        void setCompanion(const bool &pCompanion);
+        bool getCompanion() const;
 };
 
 
