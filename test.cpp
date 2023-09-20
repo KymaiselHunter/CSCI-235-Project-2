@@ -17,10 +17,20 @@ void printCharacterAttributes(Character *pCharacter)
     cout << "Character isEnemy: " << pCharacter->isEnemy() << endl;
 }
 
+void printMageAttributes(Mage *pMage)
+{
+    printCharacterAttributes(pMage);
+
+    cout << "\nUnique Mage attributes: " << endl;
+    cout << "Mage School: " << pMage->getSchool() << endl;
+    cout << "Mage Weapon: " << pMage->getCastingWeapon() << endl;
+    cout << "Mage Incarnate:" << pMage->hasIncarateSummon() << endl;
+}
+
 int main()
 {
-    Character m;
-    printCharacterAttributes(&m);
-
+    Mage m;
+    //printCharacterAttributes(&m);
+    printMageAttributes(&m);
     
 }
