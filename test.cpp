@@ -43,4 +43,8 @@ int main()
     printMageAttributes(&m);
     
     testMageSetters(&m, "elemental", "WAnd", true);
+
+    cout << "Test Paramertized Mage Constructor" << endl;
+    Mage m2 = Mage("Kyle", "HUMAN", 1000, 2000, 3000, false, "elemental", "WAnd", true);
+    printMageAttributes(&m2);
 }

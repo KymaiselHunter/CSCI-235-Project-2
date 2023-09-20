@@ -1,5 +1,6 @@
 #include "Mage.hpp"
 
+
 //Constructors
 Mage::Mage()
 {
@@ -9,12 +10,15 @@ Mage::Mage()
 }
 
 //Parameterized constructor
-// Mage::Mage(const std::string &pName, const std::string &pRace, int pVitality, 
-//         int pArmor, int pLevel, bool pEnemy, const std::string &pSchool, 
-//         const std::string &pWeapon, bool pSummon)
-// {
-
-// }
+Mage::Mage(const std::string &pName, const std::string &pRace, int pVitality, 
+        int pArmor, int pLevel, bool pEnemy, const std::string &pSchool, 
+        const std::string &pWeapon, bool pSummon):
+        Character(pName, pRace, pVitality, pArmor, pLevel, pEnemy)
+{
+    if(!this->setSchool(pSchool)) school_of_magic_ = "NONE";
+    if(!this->setCastingWeapon(pWeapon)) weapon_ = "NONE";
+    can_summon_incarnate_ = pSummon;
+}
 
 //School Setter and getter
 bool Mage::setSchool(const std::string &pSchool)
