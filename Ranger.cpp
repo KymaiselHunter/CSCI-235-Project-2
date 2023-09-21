@@ -8,14 +8,24 @@ Ranger::Ranger()
 }
 
 //Paramertrized
-// Ranger::Ranger(const std::string &pName, const std::string &pRace, int pVitality, 
-//         int pArmor, int pLevel, bool pEnemy,
-//         const std::vector<Arrows> pArrows, const std::vector<std::string> pAffinities, const bool pCompanian)
-//         :
-//         Character(pName, pRace, pVitality, pArmor, pLevel, pEnemy)
-// {
+Ranger::Ranger(const std::string &pName, const std::string &pRace, int pVitality, 
+        int pArmor, int pLevel, bool pEnemy,
+        const std::vector<Arrows> pArrows, const std::vector<std::string> pAffinities, const bool pCompanian)
+        :
+        Character(pName, pRace, pVitality, pArmor, pLevel, pEnemy)
+{
+    for(int i = 0; i < pArrows.size(); i++)
+    {
+        this->addArrows(pArrows.at(i).type_, pArrows.at(i).quantity_);
+    }
 
-// }
+    for(int i = 0; i < pAffinities.size(); i++)
+    {
+        this->addAffinity(pAffinities.at(i));
+    }
+
+    this->setCompanion(pCompanian);
+}
 
 std::vector<Arrows> Ranger::getArrows() const
 {

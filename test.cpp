@@ -113,4 +113,22 @@ int main()
     printRangerAttributes(&r);
 
     testRangerSetters(&r, "fire", 5, "water", true);
+    
+    cout << "Test Paramertized Ranger Constructor" << endl;
+    Arrows testArrow;
+    testArrow.type_ = "poison";
+    testArrow.quantity_ = 25;
+
+    vector<Arrows> testQuiver;
+    testQuiver.push_back(testArrow);
+
+    vector<string> testAffinities;
+    testAffinities.push_back("FIRE");
+
+    Ranger r2 = Ranger("Kyle", "HUMAN", 1000, 2000, 3000, false, testQuiver, testAffinities, true);
+    printRangerAttributes(&r2);
+
+    cout << "Test Default Paramertized Ranger Constructor" << endl;
+    Ranger r3 = Ranger("Kyle");
+    printRangerAttributes(&r3);
 }
