@@ -18,17 +18,17 @@ class Ranger: public Character
     private:
         std::vector<Arrows> arrows_;
         std::vector<std::string> affinities_;
-        bool has_companion;
+        bool has_companion_;
 
     public:
         Ranger();
-        Ranger(const std::string &pName, const std::string &pRace = "NONE", int pVitality = 0, 
-        int pArmor = 0, int pLevel = 0, bool pEnemy = false, 
-        std::vector<Arrows> pArrows, std::vector<std::string> pAffinities, bool pCompanian = false);
+        // Ranger(const std::string &pName, const std::string &pRace = "NONE", int pVitality = 0, 
+        // int pArmor = 0, int pLevel = 0, bool pEnemy = false, 
+        // const std::vector<Arrows> pArrows, const std::vector<std::string> pAffinities, const bool pCompanian = false);
 
         std::vector<Arrows> getArrows() const;
-        bool addArrows(const std::string &pType, const int pQuantity);
-        bool fireArrow(const std::string &ptype);
+        bool addArrows(const std::string &pType, const int &pQuantity);
+        bool fireArrow(const std::string &pType);
 
         bool addAffinity(const std::string &pAffinity);
         std::vector<std::string> getAffinities() const;

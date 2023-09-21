@@ -12,7 +12,7 @@ Scoundrel::Scoundrel()
 // parameterized
 Scoundrel::Scoundrel(const std::string &pName, const std::string &pRace, int pVitality, 
         int pArmor, int pLevel, bool pEnemy, const std::string &pDagger, 
-        const std::string &pFaction, bool pDisguise)
+        const std::string &pFaction, const bool pDisguise)
         :
         Character(pName, pRace, pVitality, pArmor, pLevel, pEnemy)
 {

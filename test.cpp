@@ -4,11 +4,14 @@ using namespace std;
 #include "Character.hpp"
 #include "Mage.hpp"
 #include "Scoundrel.hpp"
+#include "Ranger.hpp"
 
 #include "Character.cpp"
 #include "Mage.cpp"
 #include "Scoundrel.cpp"
+#include "Ranger.cpp"
 
+#include <vector>
 void printCharacterAttributes(Character *pCharacter)
 {
     cout << "Character Name: " << pCharacter->getName() << endl;
@@ -48,6 +51,43 @@ void printScoundrelAttributes(Scoundrel *pScoundrel)
     cout << "Scoundrel Disguise: " << pScoundrel->hasDisguise() << endl;
 }
 
+void printRangerAttributes(Ranger *pRanger)
+{
+    printCharacterAttributes(pRanger);
+
+    vector<Arrows> rangerQuiver = pRanger->getArrows();
+    
+    cout << "Ranger Quiver:" << endl;
+    for(int i = 0; i < rangerQuiver.size(); i++)
+    {
+        cout << rangerQuiver.at(i).type_ << " : " << rangerQuiver.at(i).quantity_ << endl;
+    }
+    
+    vector<string> rangerAffinities = pRanger->getAffinities();
+    
+    cout << "Ranger Affinities: " << endl;
+    for(int i = 0 ; i < rangerAffinities.size(); i++)
+    {
+        cout << rangerAffinities.at(i) << endl;
+    }
+
+    cout << "Has Companion: " << pRanger->getCompanion() << endl;
+}
+
+void testRangerSetters(Ranger *pRanger, string pArrowType = "NONE", int pArrowQuantity = 0, string pAffinity = "NONE", bool pCompanion = false)
+{
+    cout << "Arrow added?: "<<pRanger->addArrows(pArrowType, pArrowQuantity) << endl;
+    pRanger->addAffinity(pAffinity);
+    pRanger->setCompanion(pCompanion);
+
+    printRangerAttributes(pRanger);
+
+    pRanger->fireArrow(pArrowType);
+    pRanger->fireArrow("wood");
+
+    printRangerAttributes(pRanger);
+}
+
 int main()
 {
     Mage m;
@@ -67,4 +107,10 @@ int main()
     cout << "Test Paramertized SCoundrel Constructor" << endl;
     Scoundrel s2 = Scoundrel("Kyle", "HUMAN", 1000, 2000, 3000, false, "iron", "shadowblade", true);
     printScoundrelAttributes(&s2);
+
+    cout << "\nTest Ranger" << endl;
+    Ranger r;
+    printRangerAttributes(&r);
+
+    testRangerSetters(&r, "fire", 5, "water", true);
 }

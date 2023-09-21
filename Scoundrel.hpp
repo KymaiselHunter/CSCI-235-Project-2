@@ -20,7 +20,7 @@ class Scoundrel : public Character
         Scoundrel();
         Scoundrel(const std::string &pName, const std::string &pRace = "NONE", int pVitality = 0, 
         int pArmor = 0, int pLevel = 0, bool pEnemy = false, const std::string &pDagger = "WOOD", 
-        const std::string &pFaction = "NONE", bool pDisguise = false);
+        const std::string &pFaction = "NONE", const bool pDisguise = false);
 
         //accessor and mutators
         //Dagger accessor and mutators
