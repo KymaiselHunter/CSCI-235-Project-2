@@ -7,11 +7,11 @@ using namespace std;
 #include "Ranger.hpp"
 #include "Barbarian.hpp"
 
-#include "Character.cpp"
-#include "Mage.cpp"
-#include "Scoundrel.cpp"
-#include "Ranger.cpp"
-#include "Barbarian.cpp"
+// #include "Character.cpp"
+// #include "Mage.cpp"
+// #include "Scoundrel.cpp"
+// #include "Ranger.cpp"
+// #include "Barbarian.cpp"
 
 #include <vector>
 void printCharacterAttributes(Character *pCharacter)
