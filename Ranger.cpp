@@ -44,14 +44,14 @@ Ranger::Ranger(const std::string &pName, const std::string &pRace, int pVitality
         :
         Character(pName, pRace, pVitality, pArmor, pLevel, pEnemy)
 {
-    int arrowSize = pArrows.size();
-    for(int i = 0; i < arrowSize; i++)//size_t
+    //int arrowSize = pArrows.size();
+    for(size_t i = 0; i < pArrows.size(); i++)//size_t
     {
         this->addArrows(pArrows.at(i).type_, pArrows.at(i).quantity_);
     }
 
-    int affinitiesSize = pAffinities.size();
-    for(int i = 0; i < affinitiesSize; i++)
+    //int affinitiesSize = pAffinities.size();
+    for(size_t i = 0; i < pAffinities.size(); i++)
     {
         this->addAffinity(pAffinities.at(i));
     }
@@ -96,11 +96,11 @@ bool Ranger::addArrows(const std::string &pType, const int &pQuantity)
     capitalInput != "POISON"&& capitalInput != "BLOOD") return false;
 
     //varibables to check if this arrow exists or not
-    int vectorSize = arrows_.size();
+    //int vectorSize = arrows_.size();
     bool newArrowType = true;
     int arrowIndex = -1;//unused if arrow of this type does not exist
     //loops through the arrow vector to see if it should be updated
-    for(int i = 0; i < vectorSize; i++)
+    for(size_t i = 0; i < arrows_.size(); i++)
     {
         //if this arrow type already exists, just add to arrow struct quantity
         if(arrows_.at(i).type_ == capitalInput) 
@@ -150,11 +150,11 @@ bool Ranger::fireArrow(const std::string &pType)
     capitalInput != "POISON"&& capitalInput != "BLOOD") return false;
 
     //varibables to check if this arrow exists or not
-    int vectorSize = arrows_.size();
+    //int vectorSize = arrows_.size();
     bool hasArrowType = false;
     int arrowIndex = -1;//unused if arrow of this type does not exist
     //loops through the arrow vector to see if it should be updated
-    for(int i = 0; i < vectorSize; i++)
+    for(size_t i = 0; i < arrows_.size(); i++)
     {
         //if this arrow type already exists, just add to arrow struct quantity
         if(arrows_.at(i).type_ == capitalInput) 
@@ -201,9 +201,9 @@ bool Ranger::addAffinity(const std::string &pAffinity)
     capitalInput != "POISON" && capitalInput != "BLOOD") return false;
 
     //varibables to check if this AFFINITY is in the vector or not
-    int vectorSize = affinities_.size();
+    //int vectorSize = affinities_.size();
     //loops through the affinities vector to see if it should be updated
-    for(int i = 0; i < vectorSize; i++)
+    for(size_t i = 0; i < affinities_.size(); i++)
     {
         //if this affinity already exists, return false
         if(affinities_.at(i) == capitalInput) 
