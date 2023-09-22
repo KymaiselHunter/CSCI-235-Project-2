@@ -70,7 +70,7 @@ bool Scoundrel::setFaction(const std::string &pFaction)
 
     //Checks if the input matches, changes and returns true if it does
     //stays the same and returns false if otherwise
-    if(capitalInput == "NONE" || capitalInput == "CUTPRUSE" || 
+    if(capitalInput == "NONE" || capitalInput == "CUTPURSE" || 
     capitalInput == "SHADOWBLADE" || capitalInput == "SILVERTONGUE")
     {
         faction_ = capitalInput;
