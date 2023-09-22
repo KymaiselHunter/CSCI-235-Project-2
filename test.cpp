@@ -68,6 +68,15 @@ void printScoundrelAttributes(Scoundrel *pScoundrel)
     else cout << "Disguise: FALSE" << endl;
 }
 
+void testScoundrelSetters(Scoundrel *pScoundrel, string pDagger = "NONE", string pFaction = "NONE", bool pDisguise = false)
+{
+    pScoundrel->setDagger(pDagger);
+    pScoundrel->setFaction(pFaction);
+    pScoundrel->setDisguise(pDisguise);
+
+    printScoundrelAttributes(pScoundrel);
+}
+
 void printRangerAttributes(Ranger *pRanger)
 {
     printCharacterAttributes(pRanger);
