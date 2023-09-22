@@ -14,12 +14,14 @@ Ranger::Ranger(const std::string &pName, const std::string &pRace, int pVitality
         :
         Character(pName, pRace, pVitality, pArmor, pLevel, pEnemy)
 {
-    for(int i = 0; i < pArrows.size(); i++)
+    int arrowSize = pArrows.size();
+    for(int i = 0; i < arrowSize; i++)
     {
         this->addArrows(pArrows.at(i).type_, pArrows.at(i).quantity_);
     }
 
-    for(int i = 0; i < pAffinities.size(); i++)
+    int affinitiesSize = pAffinities.size();
+    for(int i = 0; i < affinitiesSize; i++)
     {
         this->addAffinity(pAffinities.at(i));
     }
