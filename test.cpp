@@ -89,7 +89,7 @@ void printRangerAttributes(Ranger *pRanger)
     vector<Arrows> rangerQuiver = pRanger->getArrows();
     
     cout << "Vector of arrows: ";
-    for(size_t i = 0; i < rangerQuiver.size(); i++)//size_t to fix make filef
+    for(size_t i = 0; i < rangerQuiver.size(); i++)//size_t to fix make file
     {
         cout << rangerQuiver.at(i).type_ << ", " << rangerQuiver.at(i).quantity_;
         if(i < rangerQuiver.size() - 1) cout << ", ";
