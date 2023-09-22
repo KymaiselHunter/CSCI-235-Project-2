@@ -5,11 +5,13 @@ using namespace std;
 #include "Mage.hpp"
 #include "Scoundrel.hpp"
 #include "Ranger.hpp"
+#include "Barbarian.hpp"
 
 #include "Character.cpp"
 #include "Mage.cpp"
 #include "Scoundrel.cpp"
 #include "Ranger.cpp"
+#include "Barbarian.cpp"
 
 #include <vector>
 void printCharacterAttributes(Character *pCharacter)
@@ -29,7 +31,7 @@ void printMageAttributes(Mage *pMage)
     cout << "\nUnique Mage attributes: " << endl;
     cout << "Mage School: " << pMage->getSchool() << endl;
     cout << "Mage Weapon: " << pMage->getCastingWeapon() << endl;
-    cout << "Mage Incarnate:" << pMage->hasIncarateSummon() << endl;
+    cout << "Mage Incarnate:" << pMage->hasIncarnateSummon() << endl;
 }
 
 void testMageSetters(Mage *pMage, string pSchool = "NONE", string pWeapon = "NONE", bool pIncarnate = false)
@@ -88,6 +90,29 @@ void testRangerSetters(Ranger *pRanger, string pArrowType = "NONE", int pArrowQu
     printRangerAttributes(pRanger);
 }
 
+void printBarbarianAttributes(Barbarian *pBarbarian)
+{
+    printCharacterAttributes(pBarbarian);
+
+    cout << "\nUnique Barbarian attributes: " << endl;
+    cout << "Barbarian main: " << pBarbarian->getMainWeapon() << endl;
+    cout << "Barbarian secondary: " << pBarbarian->getSecondaryWeapon() << endl;
+    cout << "Barbarian enrage: " << pBarbarian->getEnrage() << endl;
+}
+
+void testBarbarianSetters(Barbarian *pBarbarian, string pMainWeapon = "NONE", string pSecondaryWeapon = "NONE", bool pEnrage = false)
+{
+    pBarbarian->setMainWeapon(pMainWeapon);
+    pBarbarian->setSecondaryWeapon(pSecondaryWeapon);
+    pBarbarian->setEnrage(pEnrage);
+
+    printBarbarianAttributes(pBarbarian);
+
+    cout <<"Test toggle" << endl;
+    pBarbarian->toggleEnrage();
+    printBarbarianAttributes(pBarbarian);
+}
+
 int main()
 {
     Mage m;
@@ -131,4 +156,13 @@ int main()
     cout << "Test Default Paramertized Ranger Constructor" << endl;
     Ranger r3 = Ranger("Kyle");
     printRangerAttributes(&r3);
+
+    cout << "Test Barbarian: " << endl;
+    Barbarian b;
+    printBarbarianAttributes(&b);
+    testBarbarianSetters(&b, "deez", "nuts", true);
+
+    cout << "Test Paramertized Barbarian Constructor" << endl;
+    Barbarian b2 = Barbarian("Kyle", "HUMAN", 1000, 2000, 3000, false, "yo", "mama", true);
+    printBarbarianAttributes(&b2);
 }

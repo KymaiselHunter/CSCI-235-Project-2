@@ -30,7 +30,7 @@ class Mage : public Character
 
         //incarnateSummon accessor and mutator
         void setIncarnateSummon(const bool &pSummon);
-        bool hasIncarateSummon() const;
+        bool hasIncarnateSummon() const;
 };
 
 

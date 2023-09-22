@@ -82,7 +82,7 @@ void Mage::setIncarnateSummon(const bool &pSummon)
     can_summon_incarnate_ = pSummon;
 }
 
-bool Mage::hasIncarateSummon() const
+bool Mage::hasIncarnateSummon() const
 {
     return can_summon_incarnate_;
 }
