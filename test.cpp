@@ -204,7 +204,7 @@ int main()
     //cout << "\nTest Ranger" << endl;
     Ranger r;
     testMutators(&r, " defaultRanger", "UNDEAD",8,4,5,true);
-    printCharacterAttributes(&s);
+    printCharacterAttributes(&r);
 
     
     // cout << "Test Paramertized Ranger Constructor" << endl;

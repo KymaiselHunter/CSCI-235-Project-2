@@ -18,7 +18,7 @@ Scoundrel::Scoundrel(const std::string &pName, const std::string &pRace, int pVi
 {
     setDagger(pDagger);
     if(!this->setFaction(pFaction)) faction_ = "NONE";
-    this->setDisguise(pDisguise);
+    this->setDisguise(&pDisguise);
 }
 
 //Dagger setter and getters
