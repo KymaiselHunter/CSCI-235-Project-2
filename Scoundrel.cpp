@@ -41,7 +41,7 @@ void Scoundrel::setDagger(const std::string &pDagger)
     else if(capitalInput == "MITHRIL") dagger_ = MITHRIL;
     else if(capitalInput == "ADAMANT") dagger_ = ADAMANT;
     else if(capitalInput == "RUNE") dagger_ = RUNE;
-    else dagger_ = BRONZE;
+    else dagger_ = WOOD;
 }
 
 std::string Scoundrel::getDagger() const

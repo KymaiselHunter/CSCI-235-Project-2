@@ -134,57 +134,6 @@ void testBarbarianSetters(Barbarian *pBarbarian, string pMainWeapon = "NONE", st
 
 int main()
 {
-    // Mage m;
-    // //printCharacterAttributes(&m);
-    // printMageAttributes(&m);
-    
-    // testMageSetters(&m, "elemental", "WAnd", true);
-
-    // cout << "Test Paramertized Mage Constructor" << endl;
-    // Mage m2 = Mage("Kyle", "HUMAN", 1000, 2000, 3000, false, "elemental", "WAnd", true);
-    // printMageAttributes(&m2);
-
-    // cout << "\nTest Scoundrel" << endl;
-    // Scoundrel s;
-    // printScoundrelAttributes(&s);
-
-    // cout << "Test Paramertized SCoundrel Constructor" << endl;
-    // Scoundrel s2 = Scoundrel("Kyle", "HUMAN", 1000, 2000, 3000, false, "iron", "shadowblade", true);
-    // printScoundrelAttributes(&s2);
-
-    // cout << "\nTest Ranger" << endl;
-    // Ranger r;
-    // printRangerAttributes(&r);
-
-    // testRangerSetters(&r, "fire", 5, "water", true);
-    
-    // cout << "Test Paramertized Ranger Constructor" << endl;
-    // Arrows testArrow;
-    // testArrow.type_ = "poison";
-    // testArrow.quantity_ = 25;
-
-    // vector<Arrows> testQuiver;
-    // testQuiver.push_back(testArrow);
-
-    // vector<string> testAffinities;
-    // testAffinities.push_back("FIRE");
-
-    // Ranger r2 = Ranger("Kyle", "HUMAN", 1000, 2000, 3000, false, testQuiver, testAffinities, true);
-    // printRangerAttributes(&r2);
-
-    // cout << "Test Default Paramertized Ranger Constructor" << endl;
-    // Ranger r3 = Ranger("Kyle");
-    // printRangerAttributes(&r3);
-
-    // cout << "Test Barbarian: " << endl;
-    // Barbarian b;
-    // printBarbarianAttributes(&b);
-    // testBarbarianSetters(&b, "deez", "nuts", true);
-
-    // cout << "Test Paramertized Barbarian Constructor" << endl;
-    // Barbarian b2 = Barbarian("Kyle", "HUMAN", 1000, 2000, 3000, false, "yo", "mama", true);
-    // printBarbarianAttributes(&b2);
-
     Mage m;
     testMutators(&m, "defaultMage", "ELF" , 5,3,2, true);
     printCharacterAttributes(&m);
@@ -247,3 +196,61 @@ int main()
     Barbarian b2 = Barbarian("BONK", "HUMAN", 11, 5, 5, true, "MACE", "ANOTHERMACE", true);
     printBarbarianAttributes(&b2);
 }
+
+// int main()
+// {
+//     // Mage m;
+//     // //printCharacterAttributes(&m);
+//     // printMageAttributes(&m);
+    
+//     // testMageSetters(&m, "elemental", "WAnd", true);
+
+//     // cout << "Test Paramertized Mage Constructor" << endl;
+//     // Mage m2 = Mage("Kyle", "HUMAN", 1000, 2000, 3000, false, "elemental", "WAnd", true);
+//     // printMageAttributes(&m2);
+
+//     cout << "\nTest Scoundrel" << endl;
+//     Scoundrel s;
+//     printScoundrelAttributes(&s);
+
+//     cout << "Test Paramertized SCoundrel Constructor" << endl;
+//     Scoundrel s2 = Scoundrel("Kyle", "HUMAN", 1000, 2000, 3000, false, "iron", "shadowblade", true);
+//     printScoundrelAttributes(&s2);
+
+//     cout << "Test default Paramertized SCoundrel Constructor" << endl;
+//     Scoundrel s3 = Scoundrel("Kyle");
+//     printScoundrelAttributes(&s3);
+
+//     // cout << "\nTest Ranger" << endl;
+//     // Ranger r;
+//     // printRangerAttributes(&r);
+
+//     // testRangerSetters(&r, "fire", 5, "water", true);
+    
+//     // cout << "Test Paramertized Ranger Constructor" << endl;
+//     // Arrows testArrow;
+//     // testArrow.type_ = "poison";
+//     // testArrow.quantity_ = 25;
+
+//     // vector<Arrows> testQuiver;
+//     // testQuiver.push_back(testArrow);
+
+//     // vector<string> testAffinities;
+//     // testAffinities.push_back("FIRE");
+
+//     // Ranger r2 = Ranger("Kyle", "HUMAN", 1000, 2000, 3000, false, testQuiver, testAffinities, true);
+//     // printRangerAttributes(&r2);
+
+//     // cout << "Test Default Paramertized Ranger Constructor" << endl;
+//     // Ranger r3 = Ranger("Kyle");
+//     // printRangerAttributes(&r3);
+
+//     // cout << "Test Barbarian: " << endl;
+//     // Barbarian b;
+//     // printBarbarianAttributes(&b);
+//     // testBarbarianSetters(&b, "deez", "nuts", true);
+
+//     // cout << "Test Paramertized Barbarian Constructor" << endl;
+//     // Barbarian b2 = Barbarian("Kyle", "HUMAN", 1000, 2000, 3000, false, "yo", "mama", true);
+//     // printBarbarianAttributes(&b2);
+// }
