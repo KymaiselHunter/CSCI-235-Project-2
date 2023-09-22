@@ -1,5 +1,8 @@
-#include "Mage.hpp"
+//Name : Kyle
+//Instructor : Dr. Tiziana Ligorio
+//Project 2
 
+#include "Mage.hpp"
 
 //Constructors
 Mage::Mage()

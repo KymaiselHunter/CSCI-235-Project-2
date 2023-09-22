@@ -1,3 +1,7 @@
+//Name : Kyle
+//Instructor : Dr. Tiziana Ligorio
+//Project 2
+
 #ifndef BARBARIAN_HPP
 #define BARBARIAN_HPP
 

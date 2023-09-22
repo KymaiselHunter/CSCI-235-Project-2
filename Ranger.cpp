@@ -1,3 +1,7 @@
+//Name : Kyle
+//Instructor : Dr. Tiziana Ligorio
+//Project 2
+
 #include "Ranger.hpp"
 
 //Constructors
@@ -15,7 +19,7 @@ Ranger::Ranger(const std::string &pName, const std::string &pRace, int pVitality
         Character(pName, pRace, pVitality, pArmor, pLevel, pEnemy)
 {
     int arrowSize = pArrows.size();
-    for(int i = 0; i < arrowSize; i++)
+    for(int i = 0; i < arrowSize; i++)//size_t
     {
         this->addArrows(pArrows.at(i).type_, pArrows.at(i).quantity_);
     }
