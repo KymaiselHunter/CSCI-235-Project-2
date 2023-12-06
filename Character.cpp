@@ -50,7 +50,8 @@ Character::Character(const std::string& name, const std::string& race, int vital
 void Character::setName(const std::string& name)
 {
     std::string nameUpper = "";
-    for(int i = 0; i<name.size();i++)
+    int length = name.size();
+    for(int i = 0; i<length;i++)
     {
         if(std::isalpha(name[i]))
         {
